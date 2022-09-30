@@ -3,13 +3,23 @@ body {
   max-width: 500px;
   display: block;
   margin: 0 auto;
+  color: rgb(56, 55, 55);
 }
 .top {
-  background-color: rgb(240, 236, 244);
+  background-image: linear-gradient(
+    to right top,
+    #fca7a7,
+    #fdb3b3,
+    #febfbf,
+    #ffcaca,
+    #ffd6d6
+  );
 }
-.cloud {
-  font-size: 140px;
-  margin-top: 35px;
+#rain img {
+  max-width: 180px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 h1 {
   font-size: 40px;
@@ -21,7 +31,7 @@ h2 {
 p {
   font-weight: 200;
   margin-top: -10px;
-  color: rgba(197, 193, 193, 0.809);
+  color: rgba(128, 124, 124, 0.652);
 }
 ul {
   list-style: none;
@@ -32,10 +42,10 @@ ul {
 #mainInfo {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
-  margin-left: 60px;
+  margin-left: 50px;
   margin-top: 20px;
 }
 #else {
