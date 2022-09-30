@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/e7652fa9b7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika+Negative&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,8 +19,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col">
+        <div class="top">
+      <div class="row" >
+        <div class="col" id="mainInfo">
           <h1>Kyiv</h1>
           <h2>20˚C</h2>
           <p>Cloudy</p>
@@ -29,23 +31,24 @@
           </ul>
         </div>
         <div class="col">
-          <img src="src/img/clear-cloudy.png" alt="sun and clouds" />
+          <i class="fa-solid fa-cloud cloud"></i>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="row" id="else">
+        <div class="col-4">
           Humidity💧 <br />
           50%
         </div>
-        <div class="col">
+        <div class="col-4">
           Wind💨<br />
           4km/h
         </div>
-        <div class="col">
+        <div class="col-4">
           Precipitation💦<br />
           0%
         </div>
       </div>
+        </div>
     </div>
   </body>
 </html>

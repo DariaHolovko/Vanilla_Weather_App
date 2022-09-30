@@ -1,0 +1,45 @@
+body {
+  font-family: "Staatliches", cursive;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.top {
+  background-color: rgb(240, 236, 244);
+}
+.cloud {
+  font-size: 140px;
+  margin-top: 35px;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+p {
+  font-weight: 200;
+  margin-top: -10px;
+  color: rgba(197, 193, 193, 0.809);
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin-left: 0px;
+  line-height: 15px;
+}
+#mainInfo {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+#else {
+  margin: 30px;
+  padding: 10px;
+  padding-left: 35px;
+}
