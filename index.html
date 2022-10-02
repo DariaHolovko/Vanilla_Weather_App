@@ -16,15 +16,16 @@
       crossorigin="anonymous"
     />
     <link rel = "stylesheet" href="src/style.css"></link>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
         <div class="top">
       <div class="row" >
         <div class="col" id="mainInfo">
-          <h1>Kyiv</h1>
-          <h2>20˚C</h2>
-          <p>Rainy</p>
+          <h1 id = "city"></h1>
+          <h2 id="temp"></h2>
+          <p id="weatherDescription"></p>
           <ul>
             <li>Friday</li>
             <li>11:56</li>
@@ -37,18 +38,19 @@
       <div class="row" id="else">
         <div class="col-4">
           Humidity💧 <br />
-          50%
+          <span id="humidity"></span>%
         </div>
         <div class="col-4">
           Wind💨<br />
-          4km/h
+          <span id="wind"></span>km/h
         </div>
         <div class="col-4">
-          Precipitation💦<br />
-          0%
+          Feels like🌡<br />
+          <span id="feeling"></span>˚
         </div>
       </div>
         </div>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
