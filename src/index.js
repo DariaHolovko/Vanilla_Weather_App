@@ -10,6 +10,7 @@ function displayTemp(response) {
   let windElement = document.querySelector("#wind");
   let feelingElement = document.querySelector("#feeling");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#weatherIcon");
   cityElement.innerHTML = response.data.name;
   tempElement.innerHTML = `${Math.round(response.data.main.temp)}˚`;
   weatherDescriptionElement.innerHTML = response.data.weather[0].description;
@@ -17,6 +18,10 @@ function displayTemp(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   feelingElement.innerHTML = Math.round(response.data.main.feels_like);
   dateElement.innerHTML = getDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function getDate(timestamp) {
   let date = new Date(timestamp);
