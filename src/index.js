@@ -1,6 +1,19 @@
-let apiKey = "8ca7dd4e61360b90fb66918853670e48";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemp);
+function searchCity(city) {
+  let apiKey = "8ca7dd4e61360b90fb66918853670e48";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemp);
+}
+searchCity("Kyiv");
+
+let search = document.querySelector(".searchEngine");
+search.addEventListener("submit", getCity);
+
+function getCity(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#citySearch");
+  searchCity(cityInputElement.value);
+}
+
 function displayTemp(response) {
   console.log(response.data);
   let cityElement = document.querySelector("#city");
