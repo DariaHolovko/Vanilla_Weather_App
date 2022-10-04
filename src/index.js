@@ -25,7 +25,8 @@ function displayTemp(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weatherIcon");
   cityElement.innerHTML = response.data.name;
-  tempElement.innerHTML = `${Math.round(response.data.main.temp)}˚`;
+  celsius = response.data.main.temp;
+  tempElement.innerHTML = `${Math.round(celsius)}˚`;
   weatherDescriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -58,3 +59,31 @@ function getDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsius * 9) / 5 + 32;
+  let convertedTemp = document.querySelector("#temp");
+  convertedTemp.innerHTML = `${Math.round(fahrenheitTemperature)}˚`;
+  fahrenheitButton.classList.add("active");
+  fahrenheitButton.classList.remove("inactive");
+  celsiusButton.classList.add("inactive");
+  celsiusButton.classList.remove("active");
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let celsiusconvertedTemp = document.querySelector("#temp");
+  celsiusconvertedTemp.innerHTML = `${Math.round(celsius)}˚`;
+  fahrenheitButton.classList.add("inactive");
+  fahrenheitButton.classList.remove("active");
+  celsiusButton.classList.add("active");
+  celsiusButton.classList.remove("inactive");
+}
+let celsius = null;
+
+let fahrenheitButton = document.querySelector("#fahrenheit");
+fahrenheitButton.addEventListener("click", convertToFahrenheit);
+
+let celsiusButton = document.querySelector("#celsius");
+celsiusButton.addEventListener("click", convertToCelsius);

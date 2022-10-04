@@ -75,3 +75,25 @@ ul {
   right: 50px;
   backdrop-filter: blur(30px);
 }
+#unitConversion {
+  font-size: 20px;
+  margin-top: 20px;
+  position: relative;
+  right: -150px;
+}
+.active {
+  text-decoration: none;
+  color: rgb(115, 113, 113);
+}
+.active:hover {
+  text-decoration: none;
+  color: rgb(115, 113, 113);
+}
+.inactive {
+  text-decoration: none;
+  color: rgb(35, 34, 34);
+}
+.inactive:hover {
+  text-decoration: none;
+  color: rgb(35, 34, 34);
+}
