@@ -50,9 +50,9 @@ ul {
   margin-top: 30px;
 }
 #else {
-  margin: 30px;
+  margin-top: 25px;
   padding: 10px;
-  padding-left: 35px;
+  text-align: center;
 }
 #citySearch {
   margin-top: 20px;
@@ -96,4 +96,17 @@ ul {
 .inactive:hover {
   text-decoration: none;
   color: rgb(35, 34, 34);
+}
+.weatherForecast {
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.forecastTemperature {
+  font-size: 17px;
+  text-align: right;
+}
+.forecastTempMin,
+.forecastDay {
+  color: rgba(70, 68, 68, 0.828);
 }
