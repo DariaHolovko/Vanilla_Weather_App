@@ -3,7 +3,6 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemp);
 }
-searchCity("Kyiv");
 
 let search = document.querySelector(".searchEngine");
 search.addEventListener("submit", getCity);
@@ -80,7 +79,32 @@ function convertToCelsius(event) {
   celsiusButton.classList.add("active");
   celsiusButton.classList.remove("inactive");
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+           <div class="forecastDay"> ${day} </div>
+            <img src="http://openweathermap.org/img/wn/01n@2x.png" width="36"/>
+            <div class="forecastTemperature">
+             <span class="forecastTempMax"> 18˚ </span> 
+             <span class="forecastTempMin"> 12˚ </span> 
+            </div>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+searchCity("Kyiv");
+
 let celsius = null;
+
+displayForecast();
 
 let fahrenheitButton = document.querySelector("#fahrenheit");
 fahrenheitButton.addEventListener("click", convertToFahrenheit);
