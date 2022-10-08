@@ -106,33 +106,4 @@ function getDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsius * 9) / 5 + 32;
-  let convertedTemp = document.querySelector("#temp");
-  convertedTemp.innerHTML = `${Math.round(fahrenheitTemperature)}˚`;
-  fahrenheitButton.classList.add("active");
-  fahrenheitButton.classList.remove("inactive");
-  celsiusButton.classList.add("inactive");
-  celsiusButton.classList.remove("active");
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let celsiusconvertedTemp = document.querySelector("#temp");
-  celsiusconvertedTemp.innerHTML = `${Math.round(celsius)}˚`;
-  fahrenheitButton.classList.add("inactive");
-  fahrenheitButton.classList.remove("active");
-  celsiusButton.classList.add("active");
-  celsiusButton.classList.remove("inactive");
-}
-
 searchCity("Kyiv");
-
-let celsius = null;
-
-let fahrenheitButton = document.querySelector("#fahrenheit");
-fahrenheitButton.addEventListener("click", convertToFahrenheit);
-
-let celsiusButton = document.querySelector("#celsius");
-celsiusButton.addEventListener("click", convertToCelsius);
