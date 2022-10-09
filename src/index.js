@@ -57,7 +57,6 @@ function displayForecast(response) {
 }
 
 function displayTemp(response) {
-  console.log(response.data);
   let cityElement = document.querySelector("#city");
   let tempElement = document.querySelector("#temp");
   let weatherDescriptionElement = document.querySelector("#weatherDescription");
@@ -104,6 +103,21 @@ function getDate(timestamp) {
   ];
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
+}
+
+function getAPI() {
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+let locationButton = document.querySelector(".currentLocationButton");
+locationButton.addEventListener("click", getAPI);
+
+function getPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiLink = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`;
+  let key = "c119ffef35b7245a5e03b6e5724ae961";
+  axios.get(`${apiLink}&appid=${key}`).then(displayTemp);
+  getForecast();
 }
 
 searchCity("Kyiv");
