@@ -60,7 +60,7 @@ ul {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
   padding-left: 5px;
   padding-top: 5px;
 }
@@ -70,10 +70,26 @@ ul {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
   position: relative;
   right: 50px;
   backdrop-filter: blur(30px);
+}
+
+.currentLocationButton {
+  background-color: rgb(43, 43, 43);
+  color: rgba(255, 255, 255, 0.79);
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(43, 43, 43);
+  margin-top: 20px;
+  position: relative;
+  left: 170px;
+}
+.currentLocationButton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(43, 43, 43);
+  border-color: rgb(43, 43, 43);
 }
 
 .weatherForecast {
@@ -83,7 +99,7 @@ ul {
 }
 .forecastTemperature {
   font-size: 17px;
-  text-align: center;
+  text-align: right;
 }
 .forecastTempMin,
 .forecastDay {
