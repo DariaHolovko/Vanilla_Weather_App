@@ -1,9 +1,10 @@
 body {
   font-family: "Staatliches", cursive;
-  max-width: 500px;
+  max-width: 520px;
   display: block;
   margin: 0 auto;
   color: rgb(56, 55, 55);
+  background-color: rgba(173, 173, 168, 0.037);
 }
 .top {
   background-image: linear-gradient(
@@ -14,7 +15,10 @@ body {
     #ffcaca,
     #ffd6d6
   );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
+  border-style: none;
   margin-top: 50px;
+  border-radius: 10px;
 }
 #weatherIcon {
   max-width: 200px;
@@ -50,7 +54,7 @@ ul {
   margin-top: 30px;
 }
 #else {
-  margin-top: 25px;
+  margin-top: 5px;
   padding: 10px;
   text-align: center;
 }
@@ -65,42 +69,64 @@ ul {
   padding-top: 5px;
 }
 #searchButton {
-  margin-top: 22px;
+  margin-top: 20px;
   margin-left: 10px;
-  background: rgba(255, 255, 255, 0.09);
-  border-radius: 5px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
-  border: none;
   position: relative;
   right: 50px;
-  backdrop-filter: blur(30px);
 }
 
-.currentLocationButton {
+.currentLocationButton,
+#searchButton {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.183);
   background-color: rgb(43, 43, 43);
-  color: rgba(255, 255, 255, 0.79);
+  color: rgba(255, 255, 255, 0.915);
   border-radius: 5px;
   border-style: solid;
   border-color: rgb(43, 43, 43);
+}
+
+.currentLocationButton {
   margin-top: 20px;
   position: relative;
   left: 170px;
 }
-.currentLocationButton:hover {
+.currentLocationButton:hover,
+#searchButton:hover {
   background-color: rgba(255, 255, 255, 0.15);
   color: rgb(43, 43, 43);
   border-color: rgb(43, 43, 43);
+  transition: 250ms;
 }
 
 .weatherForecast {
-  text-align: center;
+  text-align: left;
   margin-left: 65px;
-  margin-top: 20px;
+  padding: 20px;
 }
 .forecastTemperature {
-  font-size: 17px;
+  font-size: 16px;
 }
 .forecastTempMin,
 .forecastDay {
   color: rgba(70, 68, 68, 0.828);
+}
+.sourceCode {
+  margin: 20px;
+}
+.sourceLink {
+  color: rgb(45, 44, 44);
+}
+.upper {
+  margin: 40px;
+  margin-bottom: 0px;
+}
+.lower {
+  margin: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.upper,
+.lower {
+  color: #9d6363;
 }
